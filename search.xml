@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>基于CODESYS的PAC XML规则</title>
+      <link href="//post/SoftDesign-8.html"/>
+      <url>//post/SoftDesign-8.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在国产化替代大浪潮下，国内涌现了大批基于CODESYS Runtime的PAC控制器，最具代表性的是汇川AC系列，本篇主要记录CODESYS设备的XML规则。</p><p><a href="http://www.3s-software.com/schemas/DeviceDescription-1.0.xsd">3S规范文件1</a><br><a href="http://www.3s-software.com/schemas/TargetSettings-0.1.xsd">3S规范文件2</a></p><h2 id="一、任务配置"><a href="#一、任务配置" class="headerlink" title="一、任务配置"></a>一、任务配置</h2><p><img src="https://itatboy.github.io//image/SoftDesign/SoftDesign-8/1.jpg" alt="支持微秒、限制最小扫描周期为125微秒"></p><h2 id="二、空间分配"><a href="#二、空间分配" class="headerlink" title="二、空间分配"></a>二、空间分配</h2><p>空间大小计算规则：如图<code>Retain</code>大小设置为<code>0x100000</code>，换为10进制为<code>1048576</code>字节，等于<code>1M</code>，<code>Persistent</code>同理</p><p><img src="https://itatboy.github.io//image/SoftDesign/SoftDesign-8/2.jpg" alt="Petain Persistent"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 嵌入式 </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> CODESYS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ubuntu16.04 GitLab部署</title>
       <link href="//post/IDE-6.html"/>
       <url>//post/IDE-6.html</url>
@@ -125,37 +154,6 @@
             <tag> Ubuntu </tag>
             
             <tag> 项目 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>基于CODESYS的PAC XML规则</title>
-      <link href="//post/SoftDesign-8.html"/>
-      <url>//post/SoftDesign-8.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在国产化替代大浪潮下，国内涌现了大批基于CODESYS Runtime的PAC控制器，最具代表性的是汇川AC系列，本篇主要记录CODESYS设备的XML规则。</p><p><a href="http://www.3s-software.com/schemas/DeviceDescription-1.0.xsd">3S规范文件1</a><br><a href="http://www.3s-software.com/schemas/TargetSettings-0.1.xsd">3S规范文件2</a></p><h2 id="一、任务配置"><a href="#一、任务配置" class="headerlink" title="一、任务配置"></a>一、任务配置</h2><p><img src="https://itatboy.github.io//image/SoftDesign/SoftDesign-8/1.ipg" alt="支持微秒、限制最小扫描周期为125微秒"></p><h2 id="二、空间分配"><a href="#二、空间分配" class="headerlink" title="二、空间分配"></a>二、空间分配</h2><p>空间大小计算规则：如图<code>Retain</code>大小设置为<code>0x100000</code>，换为10进制为<code>1048576</code>字节，等于<code>1M</code>，<code>Persistent</code>同理</p><p><img src="https://itatboy.github.io//image/SoftDesign/SoftDesign-8/2.jpg" alt="Petain Persistent"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> 软件设计 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 嵌入式 </tag>
-            
-            <tag> Linux </tag>
-            
-            <tag> 项目 </tag>
-            
-            <tag> CODESYS </tag>
             
         </tags>
       
@@ -303,7 +301,7 @@
       <link href="//post/IDE-4.html"/>
       <url>//post/IDE-4.html</url>
       
-        <content type="html"><![CDATA[<h2 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h2><p><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/">清华大学开源软件镜像站-Ubuntu</a></p><p><a href="http://mirrors.163.com/ubuntu-releases/">网易开源镜像站-Ubuntu</a></p><p><code>i386</code>为32位系统，<code>amd64</code>为64位系统，<code>desktop</code>为图形界面，<code>server</code>为命令行版本</p><p><a href="https://blog.csdn.net/xueerkeji/article/details/120697361">实装Ubuntu server16.04参考</a></p><p><a href="https://blog.csdn.net/weixin_42529544/article/details/112442336">网络配置参考</a></p><h2 id="一、VMware创建虚拟机"><a href="#一、VMware创建虚拟机" class="headerlink" title="一、VMware创建虚拟机"></a>一、VMware创建虚拟机</h2><blockquote><p>创建过程不再记录，注意设置<code>系统存放位置</code>，<code>处理器配置</code>，<code>硬盘大小</code>，创建完成后，在<code>编辑虚拟机设置</code>-&gt;<code>CD/DVD</code>选择ISO文件，<code>开启此虚拟机</code>即可开始安装。</p></blockquote><h2 id="二、Ubuntu-16-安装"><a href="#二、Ubuntu-16-安装" class="headerlink" title="二、Ubuntu 16 安装"></a>二、Ubuntu 16 安装</h2><p><img src="https://itatboy.github.io//image/IDE/IDE-4/1.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/2.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/3.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/4.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/5.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/6.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/7.png" alt="安装"></p><blockquote><p>安装完成后，重启即可。</p></blockquote><h2 id="三、Ubuntu-20-安装"><a href="#三、Ubuntu-20-安装" class="headerlink" title="三、Ubuntu 20 安装"></a>三、Ubuntu 20 安装</h2><p><img src="https://itatboy.github.io//image/IDE/IDE-4/8.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/9.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/10.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/11.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/12.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/13.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/14.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/15.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/16.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/17.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/18.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/19.png" alt="安装"></p><blockquote><p>安装完成后，重启即可。</p></blockquote><h2 id="四、实用设置"><a href="#四、实用设置" class="headerlink" title="四、实用设置"></a>四、实用设置</h2><h3 id="1、全屏显示-amp-复制粘贴"><a href="#1、全屏显示-amp-复制粘贴" class="headerlink" title="1、全屏显示&amp;复制粘贴"></a>1、全屏显示&amp;复制粘贴</h3><ul><li><p><strong>更新软件源</strong></p><pre><code>sudo apt update</code></pre></li><li><p><strong>安装open-vm-tools-desktop</strong></p><pre><code>sudo apt-get install open-vm-tools-desktop</code></pre></li><li><p><strong>重启生效</strong></p></li></ul><h3 id="2、设置root密码"><a href="#2、设置root密码" class="headerlink" title="2、设置root密码"></a>2、设置root密码</h3><pre><code>sudo passwd root</code></pre><h3 id="3、切换清华源"><a href="#3、切换清华源" class="headerlink" title="3、切换清华源"></a>3、切换清华源</h3><p><img src="https://itatboy.github.io//image/IDE/IDE-4/20.png" alt="换源"></p><h3 id="4、设置中文输入法-推荐谷歌输入法"><a href="#4、设置中文输入法-推荐谷歌输入法" class="headerlink" title="4、设置中文输入法 推荐谷歌输入法"></a>4、设置中文输入法 推荐谷歌输入法</h3><p><a href="https://blog.csdn.net/jiangchao3392/article/details/73650710">参考链接</a></p><h3 id="5、开启SSH"><a href="#5、开启SSH" class="headerlink" title="5、开启SSH"></a>5、开启SSH</h3><pre class=" language-检查是否开启SSH服务"><code class="language-检查是否开启SSH服务">ps -e|grep ssh</code></pre><blockquote><p>ssh-agent：ssh-client启动，sshd：ssh-server启动。</p></blockquote><pre class=" language-安装SSH"><code class="language-安装SSH">sudo apt-get install ssh</code></pre><blockquote><p>也可以使用命令安装客户端<code>sudo apt-get install openssh-client</code>，服务端<code>sudo apt-get install openssh-server</code></p></blockquote><pre class=" language-启动SSH"><code class="language-启动SSH">sudo /etc/init.d/ssh start</code></pre><h3 id="6、安装GCC"><a href="#6、安装GCC" class="headerlink" title="6、安装GCC"></a>6、安装GCC</h3><pre><code>sudo apt-get install build-essential</code></pre>]]></content>
+        <content type="html"><![CDATA[<h2 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h2><p><a href="https://mirrors.tuna.tsinghua.edu.cn/ubuntu-releases/">清华大学开源软件镜像站-Ubuntu</a></p><p><a href="http://mirrors.163.com/ubuntu-releases/">网易开源镜像站-Ubuntu</a></p><p><code>i386</code>为32位系统，<code>amd64</code>为64位系统，<code>desktop</code>为图形界面，<code>server</code>为命令行版本</p><p><a href="https://blog.csdn.net/xueerkeji/article/details/120697361">实装Ubuntu server16.04参考</a></p><p><a href="https://blog.csdn.net/weixin_42529544/article/details/112442336">网络配置参考</a></p><h2 id="一、VMware创建虚拟机"><a href="#一、VMware创建虚拟机" class="headerlink" title="一、VMware创建虚拟机"></a>一、VMware创建虚拟机</h2><blockquote><p>创建过程不再记录，注意设置<code>系统存放位置</code>，<code>处理器配置</code>，<code>硬盘大小</code>，创建完成后，在<code>编辑虚拟机设置</code>-&gt;<code>CD/DVD</code>选择ISO文件，<code>开启此虚拟机</code>即可开始安装。</p></blockquote><h2 id="二、Ubuntu-16-安装"><a href="#二、Ubuntu-16-安装" class="headerlink" title="二、Ubuntu 16 安装"></a>二、Ubuntu 16 安装</h2><p><img src="https://itatboy.github.io//image/IDE/IDE-4/1.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/2.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/3.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/4.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/5.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/6.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/7.png" alt="安装"></p><blockquote><p>安装完成后，重启即可。</p></blockquote><h2 id="三、Ubuntu-20-安装"><a href="#三、Ubuntu-20-安装" class="headerlink" title="三、Ubuntu 20 安装"></a>三、Ubuntu 20 安装</h2><p><img src="https://itatboy.github.io//image/IDE/IDE-4/8.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/9.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/10.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/11.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/12.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/13.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/14.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/15.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/16.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/17.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/18.png" alt="安装"></p><p><img src="https://itatboy.github.io//image/IDE/IDE-4/19.png" alt="安装"></p><blockquote><p>安装完成后，重启即可。</p></blockquote><h2 id="四、实用设置"><a href="#四、实用设置" class="headerlink" title="四、实用设置"></a>四、实用设置</h2><h3 id="1、全屏显示-amp-复制粘贴"><a href="#1、全屏显示-amp-复制粘贴" class="headerlink" title="1、全屏显示&amp;复制粘贴"></a>1、全屏显示&amp;复制粘贴</h3><ul><li><p><strong>更新软件源</strong></p><pre><code>sudo apt update</code></pre></li><li><p><strong>安装open-vm-tools-desktop</strong></p><pre><code>sudo apt-get install open-vm-tools-desktop</code></pre></li><li><p><strong>重启生效</strong></p></li></ul><h3 id="2、设置root密码"><a href="#2、设置root密码" class="headerlink" title="2、设置root密码"></a>2、设置root密码</h3><pre><code>sudo passwd root</code></pre><h3 id="3、切换清华源"><a href="#3、切换清华源" class="headerlink" title="3、切换清华源"></a>3、切换清华源</h3><p><img src="https://itatboy.github.io//image/IDE/IDE-4/20.png" alt="换源"></p><h3 id="4、设置中文输入法-推荐谷歌输入法"><a href="#4、设置中文输入法-推荐谷歌输入法" class="headerlink" title="4、设置中文输入法 推荐谷歌输入法"></a>4、设置中文输入法 推荐谷歌输入法</h3><p><a href="https://blog.csdn.net/jiangchao3392/article/details/73650710">参考链接</a></p><h3 id="5、开启SSH"><a href="#5、开启SSH" class="headerlink" title="5、开启SSH"></a>5、开启SSH</h3><pre class=" language-检查是否开启SSH服务"><code class="language-检查是否开启SSH服务">ps -e|grep ssh</code></pre><blockquote><p>ssh-agent：ssh-client启动，sshd：ssh-server启动。</p></blockquote><pre class=" language-安装SSH"><code class="language-安装SSH">sudo apt-get install ssh</code></pre><blockquote><p>也可以使用命令安装客户端<code>sudo apt-get install openssh-client</code>，服务端<code>sudo apt-get install openssh-server</code></p></blockquote><pre class=" language-启动SSH"><code class="language-启动SSH">sudo /etc/init.d/ssh start</code></pre><h3 id="6、安装GCC"><a href="#6、安装GCC" class="headerlink" title="6、安装GCC"></a>6、安装GCC</h3><pre><code>sudo apt-get install build-essential</code></pre><h3 id="7、支持exFAT格式"><a href="#7、支持exFAT格式" class="headerlink" title="7、支持exFAT格式"></a>7、支持exFAT格式</h3><pre><code>sudo apt-get install exfat-utils</code></pre><h3 id="8、访问Windows共享文件夹"><a href="#8、访问Windows共享文件夹" class="headerlink" title="8、访问Windows共享文件夹"></a>8、访问Windows共享文件夹</h3><pre><code>sudo apt-get install samba</code></pre>]]></content>
       
       
       <categories>
@@ -518,35 +516,6 @@
     
     
     <entry>
-      <title>Altium Designer 21-10：输出Gerber和钻孔文件</title>
-      <link href="//post/AltiumDesigner21-10.html"/>
-      <url>//post/AltiumDesigner21-10.html</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://itatboy.github.io/post/AltiumDesigner21-1.html">Altium Designer 21-1：安装与激活</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-2.html">Altium Designer 21-2：原理图绘制</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-3.html">Altium Designer 21-3：原理图导入PCB</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-4.html">Altium Designer 21-4：规则设定</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-5.html">Altium Designer 21-5：泪滴</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-6.html">Altium Designer 21-6：覆铜</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-7.html">Altium Designer 21-7：对地过孔</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-8.html">Altium Designer 21-8：盖绿油</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-9.html">Altium Designer 21-9：规则检查</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-10.html">Altium Designer 21-10：输出Gerber和钻孔文件</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-11.html">Altium Designer 21-11：常见问题解决方案</a></p><h2 id="一、输出Gerber文件"><a href="#一、输出Gerber文件" class="headerlink" title="一、输出Gerber文件"></a>一、输出Gerber文件</h2><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/1.jpg" alt="图1"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/2.jpg" alt="图2"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/3.jpg" alt="图3"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/4.jpg" alt="图4"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/5.jpg" alt="图5"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/6.jpg" alt="图6"></p><h2 id="二、输出钻孔文件"><a href="#二、输出钻孔文件" class="headerlink" title="二、输出钻孔文件"></a>二、输出钻孔文件</h2><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/7.jpg" alt="图7"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/8.jpg" alt="图8"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/9.jpg" alt="图9"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/10.jpg" alt="图10"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Altium Designer </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 嵌入式 </tag>
-            
-            <tag> 硬件设计 </tag>
-            
-            <tag> Altium Designer </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Altium Designer 21-1：安装与激活</title>
       <link href="//post/AltiumDesigner21-1.html"/>
       <url>//post/AltiumDesigner21-1.html</url>
@@ -581,6 +550,35 @@
       <url>//post/AltiumDesigner21-11.html</url>
       
         <content type="html"><![CDATA[<p><a href="https://itatboy.github.io/post/AltiumDesigner21-1.html">Altium Designer 21-1：安装与激活</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-2.html">Altium Designer 21-2：原理图绘制</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-3.html">Altium Designer 21-3：原理图导入PCB</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-4.html">Altium Designer 21-4：规则设定</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-5.html">Altium Designer 21-5：泪滴</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-6.html">Altium Designer 21-6：覆铜</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-7.html">Altium Designer 21-7：对地过孔</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-8.html">Altium Designer 21-8：盖绿油</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-9.html">Altium Designer 21-9：规则检查</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-10.html">Altium Designer 21-10：输出Gerber和钻孔文件</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-11.html">Altium Designer 21-11：常见问题解决方案</a></p><h2 id="一、常用快捷键"><a href="#一、常用快捷键" class="headerlink" title="一、常用快捷键"></a>一、常用快捷键</h2><table><thead><tr><th>快捷键</th><th>功能</th></tr></thead><tbody><tr><td><code>CTRL + M</code></td><td>测量</td></tr><tr><td><code>CTRL + W</code></td><td>走线</td></tr><tr><td><code>CTRL + 鼠标左键</code></td><td>高亮指定网络，选择空白处按下可以取消高亮</td></tr><tr><td><code>CTRL + G</code></td><td>设置格栅</td></tr><tr><td><code>Q</code></td><td>切换单位（公制或英制）</td></tr><tr><td><code>2</code></td><td>走线</td></tr><tr><td><code>SHIFT+ 鼠标右键</code></td><td>旋转查看3D视图</td></tr></tbody></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> Altium Designer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 嵌入式 </tag>
+            
+            <tag> 硬件设计 </tag>
+            
+            <tag> Altium Designer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Altium Designer 21-10：输出Gerber和钻孔文件</title>
+      <link href="//post/AltiumDesigner21-10.html"/>
+      <url>//post/AltiumDesigner21-10.html</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://itatboy.github.io/post/AltiumDesigner21-1.html">Altium Designer 21-1：安装与激活</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-2.html">Altium Designer 21-2：原理图绘制</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-3.html">Altium Designer 21-3：原理图导入PCB</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-4.html">Altium Designer 21-4：规则设定</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-5.html">Altium Designer 21-5：泪滴</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-6.html">Altium Designer 21-6：覆铜</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-7.html">Altium Designer 21-7：对地过孔</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-8.html">Altium Designer 21-8：盖绿油</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-9.html">Altium Designer 21-9：规则检查</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-10.html">Altium Designer 21-10：输出Gerber和钻孔文件</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-11.html">Altium Designer 21-11：常见问题解决方案</a></p><h2 id="一、输出Gerber文件"><a href="#一、输出Gerber文件" class="headerlink" title="一、输出Gerber文件"></a>一、输出Gerber文件</h2><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/1.jpg" alt="图1"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/2.jpg" alt="图2"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/3.jpg" alt="图3"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/4.jpg" alt="图4"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/5.jpg" alt="图5"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/6.jpg" alt="图6"></p><h2 id="二、输出钻孔文件"><a href="#二、输出钻孔文件" class="headerlink" title="二、输出钻孔文件"></a>二、输出钻孔文件</h2><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/7.jpg" alt="图7"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/8.jpg" alt="图8"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/9.jpg" alt="图9"></p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-10/10.jpg" alt="图10"></p>]]></content>
       
       
       <categories>
@@ -692,6 +690,35 @@
     
     
     <entry>
+      <title>Altium Designer 21-7：对地过孔</title>
+      <link href="//post/AltiumDesigner21-7.html"/>
+      <url>//post/AltiumDesigner21-7.html</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://itatboy.github.io/post/AltiumDesigner21-1.html">Altium Designer 21-1：安装与激活</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-2.html">Altium Designer 21-2：原理图绘制</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-3.html">Altium Designer 21-3：原理图导入PCB</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-4.html">Altium Designer 21-4：规则设定</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-5.html">Altium Designer 21-5：泪滴</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-6.html">Altium Designer 21-6：覆铜</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-7.html">Altium Designer 21-7：对地过孔</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-8.html">Altium Designer 21-8：盖绿油</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-9.html">Altium Designer 21-9：规则检查</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-10.html">Altium Designer 21-10：输出Gerber和钻孔文件</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-11.html">Altium Designer 21-11：常见问题解决方案</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Altium Designer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 嵌入式 </tag>
+            
+            <tag> 硬件设计 </tag>
+            
+            <tag> Altium Designer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Altium Designer 21-5：泪滴</title>
       <link href="//post/AltiumDesigner21-5.html"/>
       <url>//post/AltiumDesigner21-5.html</url>
@@ -726,35 +753,6 @@
       <url>//post/AltiumDesigner21-6.html</url>
       
         <content type="html"><![CDATA[<p><a href="https://itatboy.github.io/post/AltiumDesigner21-1.html">Altium Designer 21-1：安装与激活</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-2.html">Altium Designer 21-2：原理图绘制</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-3.html">Altium Designer 21-3：原理图导入PCB</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-4.html">Altium Designer 21-4：规则设定</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-5.html">Altium Designer 21-5：泪滴</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-6.html">Altium Designer 21-6：覆铜</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-7.html">Altium Designer 21-7：对地过孔</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-8.html">Altium Designer 21-8：盖绿油</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-9.html">Altium Designer 21-9：规则检查</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-10.html">Altium Designer 21-10：输出Gerber和钻孔文件</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-11.html">Altium Designer 21-11：常见问题解决方案</a></p><h2 id="说在前面"><a href="#说在前面" class="headerlink" title="说在前面"></a>说在前面</h2><p>覆铜管理器快捷键<code>T-G-M</code></p><h2 id="一、覆铜管理器覆铜"><a href="#一、覆铜管理器覆铜" class="headerlink" title="一、覆铜管理器覆铜"></a>一、覆铜管理器覆铜</h2><p>打开<code>覆铜管理器</code>，选择<code>来自...的新多边形</code>-<code>板外形</code>，设置<code>Net</code> <code>Layer</code> <code>Name</code>，勾选<code>Remove Dead Copper</code>去除死铜</p><p><img src="https://itatboy.github.io//image/AltiumDesigner/AltiumDesigner21-6/1.jpg" alt="图1"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Altium Designer </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 嵌入式 </tag>
-            
-            <tag> 硬件设计 </tag>
-            
-            <tag> Altium Designer </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Altium Designer 21-7：对地过孔</title>
-      <link href="//post/AltiumDesigner21-7.html"/>
-      <url>//post/AltiumDesigner21-7.html</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://itatboy.github.io/post/AltiumDesigner21-1.html">Altium Designer 21-1：安装与激活</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-2.html">Altium Designer 21-2：原理图绘制</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-3.html">Altium Designer 21-3：原理图导入PCB</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-4.html">Altium Designer 21-4：规则设定</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-5.html">Altium Designer 21-5：泪滴</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-6.html">Altium Designer 21-6：覆铜</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-7.html">Altium Designer 21-7：对地过孔</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-8.html">Altium Designer 21-8：盖绿油</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-9.html">Altium Designer 21-9：规则检查</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-10.html">Altium Designer 21-10：输出Gerber和钻孔文件</a><br><a href="https://itatboy.github.io/post/AltiumDesigner21-11.html">Altium Designer 21-11：常见问题解决方案</a></p>]]></content>
       
       
       <categories>
