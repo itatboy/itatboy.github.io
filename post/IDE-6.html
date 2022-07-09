@@ -373,6 +373,10 @@ sudo apt-get">
                                 <span class="chip bg-color">Ubuntu</span>
                             </a>
                         
+                            <a href="/tags/GitLab/">
+                                <span class="chip bg-color">GitLab</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -467,6 +471,16 @@ sudo apt-get">
 </code></pre>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/hechangfei/article/details/122358747">点这里解决卡住问题</a></p>
 </li>
+<li><p><strong>解决<code>free -h cached</code>过大问题，需要切换到root<code>sudo -i</code></strong></p>
+<pre><code>sync
+
+echo 1 &gt; /proc/sys/vm/drop_caches
+
+echo 2 &gt; /proc/sys/vm/drop_caches
+
+echo 3 &gt; /proc/sys/vm/drop_caches
+</code></pre>
+</li>
 <li><p><strong>开机启动，非必要</strong></p>
 <pre><code>sudo systemctl enable gitlab-runsvdir.service
 </code></pre>
@@ -518,6 +532,10 @@ sudo ufw delete allow from 192.168.1.10 // 从允许访问列表中删除，即�
                             
                                 <a href="/tags/Ubuntu/">
                                     <span class="chip bg-color">Ubuntu</span>
+                                </a>
+                            
+                                <a href="/tags/GitLab/">
+                                    <span class="chip bg-color">GitLab</span>
                                 </a>
                             
                         </div>

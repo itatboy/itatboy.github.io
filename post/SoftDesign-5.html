@@ -417,27 +417,27 @@
 <p><strong>为什么要用交叉编译？</strong></p>
 <p>由于嵌入式系统资源有限，在其上进行代码的编辑和编译是一件耗时耗力的事情，通常会使用功能强大的PC配合交叉编译工具链来编辑和编译出可在ARM平台上运行的可执行程序，通过某种方式上传到目标机即可。</p>
 <h2 id="二、交叉编译工具链构建"><a href="#二、交叉编译工具链构建" class="headerlink" title="二、交叉编译工具链构建"></a>二、交叉编译工具链构建</h2><p>交叉编译工具链有很多种，我们以在Ubuntu构建<code>arm-v7a-linux-gnueabihf.tar.bz2</code>为例，构建过程无非是解压和添加系统变量。</p>
-<pre class=" language-步骤"><code class="language-步骤">/* 在/usr/local目录文件夹新建arm文件夹，将文件移动到该文件夹 */
-mkdir /usr/local/arm
+<pre class=" language-步骤"><code class="language-步骤">/* 将文件移动到/usr/local */
+sudo mv arm-v7a-linux-gnueabihf.tar.bz2 /usr/local
 
 /* 解压 */
-tar –jxvf arm-v7a-linux-gnueabihf.tar.bz2
+sudo tar –jxvf arm-v7a-linux-gnueabihf.tar.bz2
     
 /* 打开bash */
-sudo gedit /etc/profile
+sudo vim /etc/profile
     
 /* 在打开文件的末尾添加全局变量, 完整路径*/
-export PATH=$PATH:/usr/local/arm/arm-v7a-linux-gnueabihf/gcc-4.8.3-glibc-2.18-binutils-2.24-kernel-3.12-sanitized/bin
+export PATH=$PATH:/usr/local/arm-v7a-linux-gnueabihf/gcc-4.8.3-glibc-2.18-binutils-2.24-kernel-3.12-sanitized/bin
     
 /* 使设置生效，重要步骤 */
 source /etc/profile
 
-/* 重启 */
+/* 重启，非必要 */
 
 /* 验证，输入下方命令，按下TAB */
 arm-v7a-linux-gnueabihf-
 
-/* 验证,查看gcc版本信息 */
+/* 验证,查看gcc版本信息，查看版本报错看第三节 */
 arm-v7a-linux-gnueabihf-gcc -v
 </code></pre>
 <h2 id="三、解决cannot-execute-binary-file-Exec-format-error-amp-No-such-file-or-directory"><a href="#三、解决cannot-execute-binary-file-Exec-format-error-amp-No-such-file-or-directory" class="headerlink" title="三、解决cannot execute binary file: Exec format error&amp;No such file or directory"></a>三、解决cannot execute binary file: Exec format error&amp;No such file or directory</h2><p>报错原因是当前系统不支持32位程序，通过<code>uname -a</code>可查看系统位数</p>
