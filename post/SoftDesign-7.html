@@ -416,63 +416,39 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>近期逐步参与到公司Q系列产品开发中，Q系列作为中型PAC，采用了Linux + CODESYS runtime的技术方案。由于才疏学浅，遂以此文记录整个过程。</p>
-<table>
-<thead>
-<tr>
-<th align="center">产品型号</th>
-<th align="center">CPU架构</th>
-<th align="center">描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Q0</td>
-<td align="center"></td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">Q1</td>
-<td align="center">ARM</td>
-<td align="center"></td>
-</tr>
-<tr>
-<td align="center">Q5</td>
-<td align="center">X86</td>
-<td align="center"></td>
-</tr>
-</tbody></table>
-<p>runtime编译必须使用<code>Ubuntu 16.04</code>版本</p>
+                <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>近期逐步参与到公司Q系列产品开发中，Q系列作为中型PAC，采用了Linux + CODESYS runtime的技术方案，开发环境建议使用<code>Ubuntu 16.04</code>版本。</p>
+<p><strong>ARM:</strong> Q0、Q1、Q3</p>
+<p><strong>X86:</strong> Q5、Q7、Q9</p>
 <p><a target="_blank" rel="noopener" href="https://itatboy.github.io/post/IDE-4.html">基于VMware安装Ubuntu</a></p>
 <p><a target="_blank" rel="noopener" href="https://itatboy.github.io/post/IDE-5.html">适用于Linux的Windows子系统</a></p>
-<p><a href="">Q1需要安装交叉编译工具链</a></p>
-<h2 id="一、编译环境"><a href="#一、编译环境" class="headerlink" title="一、编译环境"></a>一、编译环境</h2><p>操作之前最好更新软件源<code>sudo apt update</code></p>
-<p><strong>SSH（非必要）、GCC、Git</strong></p>
+<h2 id="一、环境配置"><a href="#一、环境配置" class="headerlink" title="一、环境配置"></a>一、环境配置</h2><p>首先更新软件源<code>sudo apt update</code>，安装<code>git</code>，生成密钥，并将密钥添加至<code>GitLab</code>平台</p>
 <p><a target="_blank" rel="noopener" href="https://itatboy.github.io/post/IDE-3.html">点这里学习Git操作</a></p>
-<h3 id="1、QT依赖库LIB"><a href="#1、QT依赖库LIB" class="headerlink" title="1、QT依赖库LIB"></a>1、QT依赖库LIB</h3><p>将<code>QT.tar.bz2</code>移动到<code>/usr/lib/x86_64-linux-gun</code>路径</p>
-<pre class=" language-更新动态库链接"><code class="language-更新动态库链接">sudo ldconfig
+<p><a href="">点这里学习配置ARM交叉编译环境</a></p>
+<h3 id="1、导入X86平台LIB库至-usr-lib-x86-64-linux-gun路径"><a href="#1、导入X86平台LIB库至-usr-lib-x86-64-linux-gun路径" class="headerlink" title="1、导入X86平台LIB库至/usr/lib/x86_64-linux-gun路径"></a>1、导入X86平台LIB库至<code>/usr/lib/x86_64-linux-gun</code>路径</h3><pre><code>/* 解压 */
+tar -jxvf QT.tar.bz2
+/* 更新动态库链接 */
+sudo ldconfig
 </code></pre>
+<blockquote>
 <p>子系统下执行make可能会报错，使用<code>sudo apt-cache search</code>命令搜索so在哪个包内，安装对应的包即可</p>
-<p><a target="_blank" rel="noopener" href="https://itatboy.github.io/post/SoftDesign-6.html">点这里学习如何传输文件到Linux</a></p>
-<h3 id="2、编译ModBus组件"><a href="#2、编译ModBus组件" class="headerlink" title="2、编译ModBus组件"></a>2、编译ModBus组件</h3><p>ModBus组件的功能实现依赖于外部开源库，编译该组件之前需要在<code>runtime</code>路径下新建<code>third_party</code>文件夹，将库文件<code>libmodbus-3.1.4</code>放入。</p>
-<h2 id="二、解决问题"><a href="#二、解决问题" class="headerlink" title="二、解决问题"></a>二、解决问题</h2><h3 id="1、故障Err-0000"><a href="#1、故障Err-0000" class="headerlink" title="1、故障Err 0000"></a>1、故障Err 0000</h3><p>使用CODESYS登录即可</p>
-<h3 id="2、故障Err-FFFF"><a href="#2、故障Err-FFFF" class="headerlink" title="2、故障Err FFFF"></a>2、故障Err FFFF</h3><p>安装完系统重启即可</p>
-<h3 id="3、打包权限不够"><a href="#3、打包权限不够" class="headerlink" title="3、打包权限不够"></a>3、打包权限不够</h3><p>右键pack_ota_vendor_image.sh -&gt; 属性 -&gt;  权限 -&gt; 勾选“允许执行文件”</p>
+</blockquote>
+<h2 id="二、解决问题"><a href="#二、解决问题" class="headerlink" title="二、解决问题"></a>二、解决问题</h2><h3 id="1、打包权限不够"><a href="#1、打包权限不够" class="headerlink" title="1、打包权限不够"></a>1、打包权限不够</h3><p>右键pack_ota_vendor_image.sh -&gt; 属性 -&gt;  权限 -&gt; 勾选“允许执行文件”</p>
 <blockquote>
 <p>也可将pack_ota_vendor_image文件见权限设置为777</p>
 </blockquote>
-<h3 id="4、只读文件系统"><a href="#4、只读文件系统" class="headerlink" title="4、只读文件系统"></a>4、只读文件系统</h3><pre><code>mount -o remount,rw /
+<h3 id="2、只读文件系统"><a href="#2、只读文件系统" class="headerlink" title="2、只读文件系统"></a>2、只读文件系统</h3><pre><code>mount -o remount,rw /
 </code></pre>
 <ul>
 <li>修改q5/vendor路径下的cfg文件，首先<code>df -h</code>查看硬盘分区情况，然后<code>mount -o remount,rw /硬盘分区</code></li>
 <li>在<code>/home/hcq5</code>目录下，执行上述命令，可以使用VSCode连接Q5主机</li>
 <li><code>fdisk -l</code>查看所有磁盘信息，包含未加载磁盘</li>
 </ul>
-<h3 id="5、无法直接运行hcq5"><a href="#5、无法直接运行hcq5" class="headerlink" title="5、无法直接运行hcq5"></a>5、无法直接运行hcq5</h3><pre><code>export QT_QPA_PLATFORM=&#39;offscreen&#39;
+<h3 id="3、无法直接运行hcq5"><a href="#3、无法直接运行hcq5" class="headerlink" title="3、无法直接运行hcq5"></a>3、无法直接运行hcq5</h3><pre><code>export QT_QPA_PLATFORM=&#39;offscreen&#39;
 </code></pre>
 <blockquote>
 <p>hcq5权限需要修改为777</p>
 </blockquote>
-<h3 id="6、直接运行runtime官方可执行文件"><a href="#6、直接运行runtime官方可执行文件" class="headerlink" title="6、直接运行runtime官方可执行文件"></a>6、直接运行runtime官方可执行文件</h3><ul>
+<h3 id="4、直接运行runtime官方可执行文件"><a href="#4、直接运行runtime官方可执行文件" class="headerlink" title="4、直接运行runtime官方可执行文件"></a>4、直接运行runtime官方可执行文件</h3><ul>
 <li>复制可执行文件<code>codesyscontrol</code>和<code>CODESYSControl.cfg</code>文件到Q5主机<code>tmp</code>路径下</li>
 <li>执行<code>./codesyscontrol &amp;</code>，默认会使用当前路径下的<code>cfg</code>文件</li>
 </ul>
