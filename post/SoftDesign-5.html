@@ -416,7 +416,7 @@
 </ul>
 <p><strong>为什么要用交叉编译？</strong></p>
 <p>由于嵌入式系统资源有限，在其上进行代码的编辑和编译是一件耗时耗力的事情，通常会使用功能强大的PC配合交叉编译工具链来编辑和编译出可在ARM平台上运行的可执行程序，通过某种方式上传到目标机即可。</p>
-<h2 id="二、交叉编译工具链构建"><a href="#二、交叉编译工具链构建" class="headerlink" title="二、交叉编译工具链构建"></a>二、交叉编译工具链构建</h2><p>交叉编译工具链有很多种，我们以在Ubuntu构建<code>arm-v7a-linux-gnueabihf.tar.bz2</code>为例，构建过程无非是解压和添加系统变量。</p>
+<h2 id="二、交叉编译工具链构建-ARM"><a href="#二、交叉编译工具链构建-ARM" class="headerlink" title="二、交叉编译工具链构建-ARM"></a>二、交叉编译工具链构建-ARM</h2><p>交叉编译工具链有很多种，我们以在Ubuntu构建<code>arm-v7a-linux-gnueabihf.tar.bz2</code>为例，构建过程无非是解压和添加系统变量。</p>
 <pre class=" language-步骤"><code class="language-步骤">/* 将文件移动到/usr/local */
 sudo mv arm-v7a-linux-gnueabihf.tar.bz2 /usr/local
 
@@ -440,7 +440,11 @@ arm-v7a-linux-gnueabihf-
 /* 验证,查看gcc版本信息，查看版本报错看第三节 */
 arm-v7a-linux-gnueabihf-gcc -v
 </code></pre>
-<h2 id="三、解决cannot-execute-binary-file-Exec-format-error-amp-No-such-file-or-directory"><a href="#三、解决cannot-execute-binary-file-Exec-format-error-amp-No-such-file-or-directory" class="headerlink" title="三、解决cannot execute binary file: Exec format error&amp;No such file or directory"></a>三、解决cannot execute binary file: Exec format error&amp;No such file or directory</h2><p>报错原因是当前系统不支持32位程序，通过<code>uname -a</code>可查看系统位数</p>
+<h2 id="三、交叉编译工具链构建-x86"><a href="#三、交叉编译工具链构建-x86" class="headerlink" title="三、交叉编译工具链构建-x86"></a>三、交叉编译工具链构建-x86</h2><pre><code>sudo apt-get install build-essential
+sudo apt-get install gcc
+sudo apt-get install g++
+</code></pre>
+<h2 id="四、解决cannot-execute-binary-file-Exec-format-error-amp-No-such-file-or-directory"><a href="#四、解决cannot-execute-binary-file-Exec-format-error-amp-No-such-file-or-directory" class="headerlink" title="四、解决cannot execute binary file: Exec format error&amp;No such file or directory"></a>四、解决cannot execute binary file: Exec format error&amp;No such file or directory</h2><p>报错原因是当前系统不支持32位程序，通过<code>uname -a</code>可查看系统位数</p>
 <h3 id="1、原生Ubuntu添加32位运行环境"><a href="#1、原生Ubuntu添加32位运行环境" class="headerlink" title="1、原生Ubuntu添加32位运行环境"></a>1、原生Ubuntu添加32位运行环境</h3><pre><code>sudo dpkg --add-architecture i386
 sudo apt-get update
 sudo apt-get install libc6:i386
